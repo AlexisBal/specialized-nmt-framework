@@ -1,8 +1,8 @@
 {
   "metadata": {
-    "total_fine_tunings": 226,
+    "total_fine_tunings": 227,
     "created": "2025-06-17T13:14:12.795360",
-    "last_updated": "2025-07-14T15:53:53.225878"
+    "last_updated": "2025-07-14T16:08:05.398973"
   },
   "fine_tunings": [
     {
@@ -9153,6 +9153,41 @@
           "tokens_per_second": 234.0,
           "gpu_memory_peak_gb": 0,
           "total_tokens_processed": 46000
+        }
+      }
+    },
+    {
+      "batch_id": "43",
+      "timestamp": "2025-07-14T16:08:05.393642",
+      "model_info": {
+        "base_model": "outputs/models/batch_43_20250714_153116",
+        "output_model": "outputs/models/batch_43_20250714_155958",
+        "source_language": "English",
+        "target_language": "Chinese",
+        "language_codes": {
+          "source": "en_XX",
+          "target": "zh_CN"
+        }
+      },
+      "training_metrics": {
+        "loss_metrics": {
+          "final_train_loss": 0.09964350660641988,
+          "final_eval_loss": 0.092704638838768,
+          "best_eval_loss": 0.09244831651449203,
+          "initial_eval_loss": 0.0930933877825737,
+          "loss_improvement": 0.000645071268081665
+        },
+        "convergence_metrics": {
+          "epochs_completed": 18,
+          "early_stopped": true,
+          "convergence_epoch": 0.26666666666666666,
+          "total_training_steps": 22
+        },
+        "performance_metrics": {
+          "training_time_seconds": 95.38,
+          "tokens_per_second": 231.0,
+          "gpu_memory_peak_gb": 0,
+          "total_tokens_processed": 22000
         }
       }
     }
