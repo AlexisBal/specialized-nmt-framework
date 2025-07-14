@@ -42,6 +42,59 @@ cd specialized-nmt-framework
 pip install -r requirements.txt
 ```
 
+## Installation Notes
+
+### Standard Installation
+
+```bash
+git clone https://github.com/AlexisBal/specialized-nmt-framework.git
+cd specialized-nmt-framework
+pip install -r requirements.txt
+```
+
+### Required Manual Modifications
+
+This framework requires two manual modifications to handle specific processing requirements:
+
+#### 1. CLTK Greek NER Modification
+
+The framework uses a custom proper noun list for improved Greek named entity recognition. After installing CLTK, you need to modify the default Greek NER model:
+
+1. Locate your CLTK installation directory (usually in your Python site-packages)
+2. Find the Greek NER configuration file
+3. Replace or supplement the default proper noun list with the contents of `input/proper_nouns.txt`
+
+**Note**: The default CLTK file contains significant noise (simple capitalization-based recognition with non-lemmatized forms). The `proper_nouns.txt` file provides a cleaned version with most pollution removed.
+
+#### 2. COMET Multiprocessing Modification
+
+For compatibility with Apple Silicon (MPS) devices, the COMET evaluation framework needs multiprocessing disabled:
+
+1. Locate your COMET installation (unbabel-comet package)
+2. Find the PyTorch Lightning configuration in the COMET source
+3. Disable the default criterion `if num_workers = 0 then gpus = 2` which creates a known bug on MPS
+
+**Alternative**: Use CPU-only evaluation if you encounter MPS-related issues with COMET scoring.
+
+### Environment Setup
+
+We recommend using a dedicated conda environment:
+
+```bash
+conda create -n specialized_nmt python=3.9
+conda activate specialized_nmt
+pip install -r requirements.txt
+```
+
+### Verification
+
+To verify your installation is working correctly:
+
+```bash
+python -c "import torch; import transformers; import cltk; print('Installation successful')"
+```
+
+
 ## Quick Start
 
 1. **Prepare your data**: Place source and target language XML files in the `input/` directory
