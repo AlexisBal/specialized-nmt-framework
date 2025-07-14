@@ -1,0 +1,71 @@
+# Core ML/NLP frameworks
+torch==2.7.1
+transformers==4.53.2
+sentence-transformers==5.0.0
+datasets==4.0.0
+accelerate==1.8.1
+
+# Machine Translation and Evaluation
+sacrebleu==2.5.1
+unbabel-comet==2.2.6
+rouge_score==0.1.2
+rouge-chinese==1.0.3
+
+# Classical Language Processing
+cltk==1.5.0
+stanza==1.10.1
+spacy==3.7.5
+spacy-legacy==3.0.12
+spacy-loggers==1.0.5
+
+# Scientific Computing and ML
+numpy==1.26.4
+pandas==2.3.1
+scikit-learn==1.7.0
+scipy==1.12.0
+pytorch-lightning==2.5.2
+torchmetrics==0.10.3
+
+# Optimization and Training
+optuna==4.4.0
+lightning-utilities==0.14.3
+
+# Text Processing and NLP utilities
+lxml==6.0.0
+beautifulsoup4==4.13.4
+nltk==3.9.1
+regex==2024.11.6
+tokenizers==0.21.2
+sentencepiece==0.2.0
+
+# Chinese Processing
+jieba==0.42.1
+pypinyin==0.54.0
+opencc-python-reimplemented==0.1.7
+
+# Greek Processing
+greek-accentuation==1.2.0
+
+# Data Processing
+pyarrow==20.0.0
+huggingface-hub==0.33.4
+safetensors==0.5.3
+
+# Utilities and Infrastructure
+tqdm==4.67.1
+PyYAML==6.0.2
+requests==2.32.4
+matplotlib==3.10.3
+click==8.2.1
+colorlog==6.9.0
+tabulate==0.9.0
+
+# Development and Jupyter (optional for development)
+jupyter==1.1.1
+ipython==9.4.0
+jupyterlab==4.4.4
+
+# Note: This package requires manual modifications:
+# 1. CLTK Greek NER modification using proper_nouns.txt from inputs/
+# 2. COMET multiprocessing disabled for MPS compatibility
+
