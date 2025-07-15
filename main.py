@@ -225,11 +225,6 @@ def main(book_range=None, source_language=None, target_language=None,
             torch.mps.empty_cache()
         torch.clear_autocast_cache()
 
-        # Cache HuggingFace/Transformers
-        hf_cache = Path.home() / ".cache" / "huggingface"
-        if hf_cache.exists():
-            shutil.rmtree(hf_cache, ignore_errors=True)
-
         # Cache pip temporaire
         pip_cache = Path.home() / ".cache" / "pip"
         if pip_cache.exists():
@@ -255,11 +250,6 @@ def main(book_range=None, source_language=None, target_language=None,
         if hasattr(torch.backends, 'mps') and torch.backends.mps.is_available():
             torch.mps.empty_cache()
         torch.clear_autocast_cache()
-
-        # Cache HuggingFace/Transformers
-        hf_cache = Path.home() / ".cache" / "huggingface"
-        if hf_cache.exists():
-            shutil.rmtree(hf_cache, ignore_errors=True)
 
         # Cache pip temporaire
         pip_cache = Path.home() / ".cache" / "pip"
