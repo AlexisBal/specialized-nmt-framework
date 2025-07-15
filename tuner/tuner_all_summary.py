@@ -114,7 +114,7 @@ def _print_metrics_table(all_metrics):
                 line += f"{'N/A':<10}"
             else:
                 value = baseline_data[metric_key]
-                if metric_key in ['comet_score', 'meteor_score'] and value = 0:
+                if metric_key in ['comet_score', 'meteor_score'] and value == 0:
                     line += f"{'N/A':<10}"
                 elif metric_key in ['verses_evaluated']:
                     line += f"{int(value):<10d}"
@@ -220,7 +220,7 @@ def _plot_metrics(all_metrics, title_suffix, baseline_data=None):
     axes = axes.flatten()
     
     for i, (metric_name, metric_key, color, emoji) in enumerate(metrics_to_plot):
-        values = [m[metric_key] for m in baseline_data]
+        values = [m[metric_key] for m in batch_data]
         
         # Skip COMET si pas de valeurs valides
         if metric_key == 'comet_score' and all(v == 0 for v in values):
