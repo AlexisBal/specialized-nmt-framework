@@ -152,8 +152,7 @@ If you use this framework in your research, please cite:
 @article{balmont2024specialized,
   title={Multi-Stage Domain Adaptation for Neural Machine Translation: A Hybrid Learning Framework for Specialized Terminology and Low-Resource Language Pairs},
   author={Balmont, Alexis},
-  journal={Digital Humanities Quarterly},
-  year={2024},
+  year={2025},
   url={https://github.com/AlexisBal/specialized-nmt-framework}
 }
 ```
