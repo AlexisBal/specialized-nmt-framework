@@ -169,7 +169,7 @@ Contributions are welcome! Please feel free to submit a Pull Request. For major 
 ## Contact
 
 - **Author**: Alexis Balmont
-- **Email**: alexis.balmont@gmail.com
+- **Email**: alexisbalmont@cuhk.edu.hk
 - **Affiliation**: Chinese University of Hong Kong
 - **ORCID**: https://orcid.org/0009-0004-9415-1818
 
