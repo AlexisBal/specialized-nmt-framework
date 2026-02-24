@@ -26,7 +26,6 @@ This framework addresses domain adaptation challenges in neural machine translat
 ## Dataset
 
 ### Biblical Corpora
-
 | Language Pair | Source Text | Target Text | Units | Batches |
 |---|---|---|---|---|
 | Hebrew → Chinese | Leningrad Codex (Genesis) | Chinese Union Version 2010 | 1,533 | 17 |
@@ -35,13 +34,12 @@ This framework addresses domain adaptation challenges in neural machine translat
 | English → Chinese | NIV (Gospels + Acts) | Chinese Union Version 2010 | — | — |
 
 ### Terminological Extraction Results
-
-| Language Pair | Stage 1 (Dict) | Stage 2 (+Sim) | Stage 3 (+Stat) | Stage 4 (+PN) | Total Gain |
-|---|---|---|---|---|---|
-| Hebrew → Chinese | 2,847 | 3,539 (+24%) | 3,721 (+5%) | 4,044 (+9%) | **1.42×** |
-| Greek → Chinese | 5,216 | 7,024 (+35%) | 7,445 (+6%) | 8,134 (+9%) | **1.56×** |
-| Latin → Chinese | 1,891 | 2,456 (+30%) | 2,684 (+9%) | 3,173 (+18%) | **1.68×** |
-
+| Language Pair | Stage 1 (Dict) | Stage 2 (+Sim) | Stage 3 (+Stat) | Stage 4 (+PN) | Total | Total Gain |
+|---|---|---|---|---|---|---|
+| Hebrew → Chinese | 288 | 0 | +107 | +88 | 483 | **1.68×** |
+| Greek → Chinese | 688 | 0 | +148 | +171 | 1,007 | **1.46×** |
+| Latin → Chinese | 485 | +63 | +1 | +1 | 550 | **1.13×** |
+| English → Chinese | 995 | +287 | +69 | +252 | 1,603 | **1.60×** |
 ### Out-of-Domain Evaluation
 
 Generalization tested on unseen text: *Protevangelium of James*, ch. 21.
