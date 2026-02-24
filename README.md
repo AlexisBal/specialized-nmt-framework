@@ -19,9 +19,36 @@ This framework addresses domain adaptation challenges in neural machine translat
 
 ## Performance Results
 
-- **1.13x to 2.97x improvement** in terminological learning compared to baseline dictionary approaches
+- **1.13x to 1.68x improvement** in terminological learning compared to baseline dictionary approaches (see dataset infra)
 - **Consistent gains** in BLEU/ROUGE/COMET scores for neural-enhanced language pairs
 - **Effective processing** of both resource-constrained ancient languages and modern languages
+
+## Dataset
+
+### Biblical Corpora
+
+| Language Pair | Source Text | Target Text | Units | Batches |
+|---|---|---|---|---|
+| Hebrew → Chinese | Leningrad Codex (Genesis) | Chinese Union Version 2010 | 1,533 | 17 |
+| Greek → Chinese | SBL Greek New Testament | Studium Biblicum Version 2019 | 4,748 | 55 |
+| Latin → Chinese | Nova Vulgata (Leviticus) | Studium Biblicum Version | 859 | 9 |
+| English → Chinese | NIV (Gospels + Acts) | Chinese Union Version 2010 | — | — |
+
+### Terminological Extraction Results
+
+| Language Pair | Stage 1 (Dict) | Stage 2 (+Sim) | Stage 3 (+Stat) | Stage 4 (+PN) | Total Gain |
+|---|---|---|---|---|---|
+| Hebrew → Chinese | 2,847 | 3,539 (+24%) | 3,721 (+5%) | 4,044 (+9%) | **1.42×** |
+| Greek → Chinese | 5,216 | 7,024 (+35%) | 7,445 (+6%) | 8,134 (+9%) | **1.56×** |
+| Latin → Chinese | 1,891 | 2,456 (+30%) | 2,684 (+9%) | 3,173 (+18%) | **1.68×** |
+
+### Out-of-Domain Evaluation
+
+Generalization tested on unseen text: *Protevangelium of James*, ch. 21.
+
+### Neural Translation Component
+
+Fine-tuning base model: mBART-50, trained on English–Chinese biblical parallel text.
 
 ## Framework Architecture
 
